@@ -55,3 +55,4 @@ class Inventory{
         return product ? product.stock : 0;
     }
 }
+
