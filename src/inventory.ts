@@ -54,5 +54,10 @@ class Inventory{
         const product = this.products.find(product => product.id === productId);
         return product ? product.stock : 0;
     }
+
+    getProductById(productId: number): Product | null {
+        const product = this.products.find(product => product.id === productId);
+        return product ? product : null;
+    }
 }
 

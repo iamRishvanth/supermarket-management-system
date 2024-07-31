@@ -17,6 +17,4 @@ class Product {
         return this.price - (this.price * this.discount);
     }
 
-
-
 }
