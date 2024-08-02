@@ -1,8 +1,6 @@
 class Inventory{
-    id: number;
     products: Product[];
-    constructor(id: number, products: Product[]){
-        this.id = id;
+    constructor(products: Product[]){
         this.products = products;
     }
 
@@ -55,9 +53,16 @@ class Inventory{
         return product ? product.stock : 0;
     }
 
-    getProductById(productId: number): Product | null {
+    getProductById(productId: number): Product | undefined {
         const product = this.products.find(product => product.id === productId);
-        return product ? product : null;
+        if (product) {
+            return product;
+        }
+        return undefined;
+    }
+
+    hasProduct(productId: number): boolean {
+        return this.products.some(product => product.id === productId);
     }
 }
 

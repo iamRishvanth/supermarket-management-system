@@ -5,7 +5,7 @@ class BillItem{
         this.productId = productId;
         this.quantity = quantity;
     }
-    getItemTotal(): number {
-        return this.quantity * Product.getProductById(this.productId).getPriceWithDiscount();
-    }
+    // getItemTotal(): number {
+    //     return this.quantity * Product.getProductById(this.productId).getPriceWithDiscount();
+    // }
 }

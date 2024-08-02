@@ -1,6 +1,9 @@
 class Bill{
     id: number;
-    store_id: number;
-    customer_id: number;
     billItems: BillItem[];
+
+    constructor(id: number, billItems: BillItem[]){
+        this.id = id;
+        this.billItems = billItems;
+    }
 }
